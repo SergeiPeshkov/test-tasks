@@ -4,8 +4,7 @@
     $sql= "INSERT INTO my_table (text) VALUES (:text)";
     $statement = $pdo->prepare($sql);
     $statement->execute(['text' => $text]);
-    $users=$statement->fetchAll(PDO::FETCH_ASSOC);
-
+  
     header ("location: /task_9.php");
 
   ?>
