@@ -29,45 +29,47 @@ class Router{
         
             //сравниваем то что ввел пользователь с нашими маршрутами
             foreach ($this->routes as $uriPattern => $path) {
-              //  echo "<br> $uriPattern -> $path ";
+             //  echo "<br> $uriPattern -> $path ";
          
               //если совпадает, тогда
             if(preg_match("~$uriPattern~", $uri)){               
-           
-            //
-                 $segments = explode ('/', $path);  
+          /*
+                echo '<br> Где ищем (запрос, который набрал пользователь): ' . $uri;
+                echo '<br> Что ищем (совпадение из правил): ' . $uriPattern;
+                echo '<br> Кто обрабатывает: '. $path;
+            */
+                //получаем внутренний путь из внешнего согласно правилу
+                $internalRoute = preg_replace("~$uriPattern~", $path, $uri);
+               // echo 'Нужно сформировать: '. $internalRoute;
+                //нужно определить контроллер, экшн и параметры         
+                 $segments = explode ('/', $internalRoute);  
                 //получаем имя контроллера          
-              $controllerName= array_shift($segments);              
-              $controllerName = ucfirst($controllerName).'Controller';    
-              //получаем имя экшена        
-              $actionName='action'.ucfirst(array_shift($segments));              
-              //определяем какой контроллер подключить
+                 $controllerName= array_shift($segments).'Controller';              
+                 $controllerName = ucfirst($controllerName);    
+                //получаем имя экшена        
+                $actionName='action' . ucfirst(array_shift($segments));
+              
+                $parameters =  $segments; 
+                //определяем какой контроллер подключить
                 $controllerFile = ROOT . '/controllers/' . $controllerName . '.php';
                
                 //если файл - контроллер существует, то подключаем его
                 if(file_exists($controllerFile)){
-                    include_once ($controllerFile);
-                    
+                    include_once ($controllerFile);                    
                 }
                //создать объект, вызвать метод в контроллере 
-               $controllerObject = new $controllerName;
-               $result = $controllerObject->$actionName();
+                $controllerObject = new $controllerName;
+                $result = call_user_func_array(array($controllerObject, $actionName), $parameters);
                 if($result != null){
                     break;
                 }
-
+            
             }
             }
           
     }
 
 }
-
-$router= new Router();
-$router->run();
-
-
-
 
 
 

@@ -2,15 +2,14 @@
 
 //создаем массив с маршрутами
 return array(
-    'news' => 'news/index', //actionIndex NewsController
-    'products' => 'product/list', //actionIndex  ProductController
     
+    //'news/([a-z]+)/([0-9]+)' => 'news/view/$1/$2',
+    'news/([0-9]+)' => 'news/view/$1',  
+    'news' => 'news/index',
+  
+
 
 );
-
-
-
-
 
 
 ?>
