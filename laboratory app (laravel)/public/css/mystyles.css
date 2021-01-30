@@ -1,0 +1,127 @@
+.container-new-contract {
+display: flex;
+justify-content: center;
+width: 100%;
+padding-right: 15px;
+padding-left: 15px;
+margin-right: 15px;
+margin-left: 15px;
+
+}
+.container-report {
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: center;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: 15px;
+	margin-left: 15px;
+	}
+	
+.form-new-contract {
+	width: 60%;
+	border:1px solid #e1e1e1;
+	background-color: white;
+	padding: 25px;
+}
+
+.form-new-contract button{
+	float:right;	
+}
+
+.form-new-contract table td{
+	padding: 5px;	
+	justify-content: center;
+}
+
+.form-new-contract .unit{
+	padding-left: 20px;	
+}
+
+legend {
+	font-size: 24px;
+}
+.legendContractAdd{
+	
+	font-size:14px;
+}
+
+.fieldNewContract {
+	border:thick;
+}
+
+.btn-new-contract-download {
+	padding-top: 14px;
+}
+
+.fielsetContractAdd{
+	
+	padding: 15px; 
+	border: 1px solid #ced4da; 
+	margin-bottom: 15px;
+}
+.analisis tbody{
+	background-color: #EFFBF5; 
+	border: 1px solid #e1e1e1; 
+	
+}
+
+.vertical {
+	-webkit-transform: rotate(-90deg); 
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+	
+}
+
+.analisisResult tbody td
+{
+	padding-left: 10px; 
+	padding: 5px; 
+	font-size: 0.9rem;
+	background-color: #EFFBF5; 
+	
+}
+.analisisResult tbody td:hover{
+
+	font-size: 0.9rem;
+	background-color: #fff !important; 
+	font-weight:700;
+	color:blue;
+
+}
+.analisis tbody td{
+
+	font-size: 0.9rem;
+	padding-left: 10px; 
+}
+
+.analisisPatientField
+{
+	background-color: #EFF8FB; 
+	border: 1px solid #e1e1e1;
+}
+.fieldOutputAnalis{	
+	padding: 0px;
+	font-size: 14px;
+}
+
+.fieldOutputAnalisHead{
+font-size: 16px;
+font-weight: bold;
+}
+.form-control:disabled{
+	background-color: #fff !important; 
+
+}
+
+.menuTitle{
+
+	font-family: "Nunito", sans-serif;
+}
+.menuTitle a {
+
+margin-right:200px;
+}

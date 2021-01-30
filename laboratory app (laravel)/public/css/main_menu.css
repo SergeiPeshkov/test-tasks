@@ -1,0 +1,126 @@
+/* CSS Document */
+/*.MainMenu {
+	background-color: #2276E8;*/
+
+
+		/* Навигация */
+
+.link-main-menu {
+	text-decoration: none;
+	margin: 0 10px;
+}
+
+		/* Конец навигации */
+
+
+
+			/* Форма поиска на стартовой странице */
+
+.input-group-text-mainmenu {
+	margin-left: 10%;
+	text-align: center;
+	
+}
+.input-group-mainmenu {
+	width: 50%;
+}
+		/* Кнопка */
+
+.btn-mainmenu {
+ 
+	margin-left: 5%;
+    text-decoration: none;
+    position: relative;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 8px 15px;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase; 
+    font-family: 'Roboto Condensed', Тahoma, sans-serif;
+    background: #337AB7;
+    cursor: pointer; 
+    border: 2px solid #BFE2FF;
+    overflow: hidden;
+    z-index: 1;
+
+}
+.btn-mainmenu:hover,
+.btn-mainmenu:active,
+.btn-mainmenu:focus {
+    color: #FFF;
+}
+.btn-mainmenu:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50px;
+    bottom: 0;
+    left: 0;
+    border-right: 50px solid transparent;
+    border-top: 50px solid #2D6B9F;
+    transition: transform 0.5s;
+    transform: translateX(-100%);
+    z-index: -1;
+}
+.btn-mainmenu:hover:before,
+.btn-mainmenu:active:before,
+.btn-mainmenu:focus:before {
+    transform: translateX(0);
+}
+
+		/* Конец кнопки */
+
+			/* Конец формы поиска на стартовой странице */
+
+
+/* Форма добавления пациента */
+.container-new-reg {
+display: flex;
+justify-content: center;
+width: 100%;
+padding-right: 15px;
+padding-left: 15px;
+margin-right: 15px;
+margin-left: 15px;
+}
+
+.form-new-reg {
+	width: 60%;
+	
+}
+
+.form-new-reg button{
+	float:right;
+}
+
+legend {
+	font-size: 24px;
+}
+
+.fieldNewReg {
+	border-left: thick;
+	border-right:thick;
+	border-bottom:thick
+}
+
+.fieldNewRegAccordion {
+	border: thick;
+}
+
+
+.btn-acc {
+	margin-right: 37%;
+	font-size: 18px;
+	color:rgba(0,0,0,1.00);
+	text-decoration:none;
+}
+/*.btn-acc:hover {
+	color:rgba(255,255,255,1.00);
+}
+
+
+.card-header-acccordion {
+	background-color:#337AB7;
+}
+/* Конец добавления пациента */
